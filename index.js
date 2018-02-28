@@ -183,4 +183,4 @@ client.on("message", (message) => {
         });
     }
 });
-client.login("NDE4NDE3MjM1MzcyMjc3Nzc2.DXhZmA.t_HOu2A9bS9D0mctgErCI43AE1Y");
+client.login(process.env.TOKEN);

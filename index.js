@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 client.on('ready', () => {
-  client.user.setGame(`on 15 servers | *help | By @HiMoxY#9364 .`,'https://www.twitch.tv/himoxytm');
+  client.user.setGame(`mm help | By @HiMoxY™#1027 .`,'');
   console.log('---------------');
   console.log(' Bot Is Online')
   console.log('---------------')
@@ -16,30 +16,30 @@ client.on('message', message => {
 
 client.on('message', msg => {
   if (msg.content === 'ping') {
-    msg.reply('Pong!');
+    msg.reply('pong');
   }
 });
-if (message.content === '$help') {
+if (message.content === 'mm help') {
               var embed  = new Discord.RichEmbed()
-                .addField("**LINKS**" ,":no_entry_sign: تم اضافه منع الروابط :no_entry_sign: ")
-                .addField("broadcast (bc)" ,"**الاستخدام:** ``$broadcast <الرساله> , $bc <الرساله>``")
-                .addField("**BAN**" ,"**الاستخدام:** ``h ban <المستخدم>``")
-                .addField("**KICK**" ,"**الاستخدام:** ``h kick <المستخدم> ``")
-                .addField("**ِAVATAR**" ,"**الاستخدام:** ``h avatar``")
-                .addField("**INFO**", "**الأستخدام :** ``h info``")
-                .addField("**SAY**" ,"**الاستخدام:** ``h say <الرساله>``")
-                .addField("**ID**" ,"**ال��ستخدام:** ``h id``")
-                .addField("**SERVER**" ,"**الاستخدام:** ``h server``")
-                .addField("**INVITE**" ,"**الاستخدام:** ``h invite <لأضافه البوت لأى سيرفر>``")
-                .addField("**SUPPORT**" ,"**الاستخدام:** ``h suppport <سيرفر دعم الفنى>``")
-                .addField("**QA**" ,"**الاستخدام:** ``h qa <السؤال>``  ")
-                .addField("**CLEAR**" ,"**الاستخدام:** ``h clear <العدد>``")
-                .addField("**PING**", "**الأستخدام:** ``h ping``")
-                .addField("**SERVERNAME**", "**الأستخدام:** ``h servername``")
-                .addField("**CUT_TWEET**", "**الاستخدام** ``h ct``")
-                .addField("**TWEET**", "**الاستخدام** ``h tweet <الرساله>``")
-                .addField("**NO INVITE LINKE**","تم اضافة خاصية منع الانفيتات ")
-                .addField("**LOGIN**" , " تم اضافة خاصية التفعيل لطلب تشغيلها في السيرفر كلم المبيرمجين ")
+                .addField("**LINKS**" ,":no_entry_sign: Added blocking links :no_entry_sign: ")
+                .addField("broadcast (bc)" ,"**user:** ``mm broadcast <message> , $bc <message>``")
+                .addField("**BAN**" ,"**user:** ``mm ban <user>``")
+                .addField("**KICK**" ,"**user:** ``mm kick <user> ``")
+                .addField("**ِAVATAR**" ,"**user:** ``mm avatar``")
+                .addField("**INFO**", "**user :** ``mm info``")
+                .addField("**SAY**" ,"**user:** ``$say <message>``")
+                .addField("**ID**" ,"**ال��ستخدام:** ``mm id``")
+                .addField("**SERVER**" ,"**user:** ``mm server``")
+                .addField("**INVITE**" ,"**user:** ``mm invite <invite bots>``")
+                .addField("**SUPPORT**" ,"**user:** ``$suppport <server support>``")
+                .addField("**QA**" ,"**user:** ``mm qa <السؤال>``  ")
+                .addField("**CLEAR**" ,"**user:** ``mm clear <العدد>``")
+                .addField("**PING**", "**user:** ``mm ping``")
+                .addField("**SERVERNAME**", "**user:** ``mm servername``")
+                .addField("**CUT_TWEET**", "**user** ``mm ct``")
+                .addField("**TWEET**", "**user** ``mm tweet <message>``")
+                .addField("**NO INVITE LINKE**","Added the block blocking feature")
+                .addField("**LOGIN**" , " Mommy📻 ")
                 .setColor('RANDOM')
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
@@ -63,11 +63,11 @@ client.on('message', message => {
         message.delete()
     return message.reply(`** No Invite Links :angry: ! **`)
     }
-	if (message.content === 'musicsycl') {
+	if (message.content === 'mm play') {
     if (message.member.voiceChannel) {       
         message.member.voiceChannel.join()
         .then(connection => {
-        connection.playStream("http://icepe10.infomaniak.ch/hitradio-maroc-128.mp3"); //for playing an audiostream/radio
+        connection.playStream("http://20043.live.streamtheworld.com/SKYRADIO.mp3"); //for playing an audiostream/radio
         })
         .catch(console.log);
         message.reply('Joined and started playing.');
@@ -77,17 +77,17 @@ client.on('message', message => {
 }
 });
 client.on('message', msg => {
-  if (msg.content === 'h invite') {
-    msg.reply('https://discordapp.com/oauth2/authorize/?permissions=2146958591&scope=bot&client_id=417696118814539777');
+  if (msg.content === 'mm invite') {
+    msg.reply('https://discordapp.com/oauth2/authorize/?permissions=2146958591&scope=bot&client_id=445626711313219594');
   }
 });
 client.on('message', msg => {
-  if (msg.content === 'h help') {
-    msg.reply(':envelope: | تم ارسال الرساله في الخاص');
+  if (msg.content === 'mm help') {
+    msg.reply(':envelope: | Message sent in private');
   }
 });
 client.on("message", message => {
-    var prefix = "h";
+    var prefix = "mm";
  
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix + "clear")) {
@@ -97,11 +97,11 @@ client.on("message", message => {
       
       message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
       message.channel.sendMessage("", {embed: {
-        title: "Done | تــم",
+        title: "Done ",
         color: 0x06DF00,
-        description: "تم مسح الرسائل بنجاح",
+        description: "Messages successfully cleared",
         footer: {
-          text: "Name Bot."
+          text: "Mommy📻."
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -110,17 +110,17 @@ client.on("message", message => {
 });
 // Your Avatar URL!
 client.on('message', message => {
-    if (message.content === "h avatar") {
+    if (message.content === "mm Avatar") {
     message.reply(message.author.avatarURL); 
     }
 });
 client.on('message', msg => {
-  if (msg.content === 'h suppport') {
-    msg.reply('السيرفر للمساعده,https://discord.gg/AJZj7de');
+  if (msg.content === 'mm suppport') {
+    msg.reply('server support join ,https://discord.gg/G7D7VnD');
   }
 });
 client.on("message", message => {
-      if (message.content === "h ping") {
+      if (message.content === "mm ping") {
       const embed = new Discord.RichEmbed()
   .setColor("RANDOM")
   .addField('**Ping:**' , `${Date.now() - message.createdTimestamp}` + ' ms')
@@ -128,24 +128,24 @@ client.on("message", message => {
     }
 });
     client.on('message', message => {
-     if (message.content === "$id") {
+     if (message.content === "mm id") {
      let embed = new Discord.RichEmbed()
   .setThumbnail(message.author.avatarURL)  
   .setAuthor(message.author.username)
-.setDescription("معلومات عن الحــساب")
-               .setFooter(`Name Bot.`, '')
+.setDescription("Account information")
+               .setFooter(`Mommy📻.`, '')
   .setColor("#9B59B6")
-  .addField("اســـم الحســاب", `${message.author.username}`)
-  .addField('كود الحساب الخاص', message.author.discriminator)
-  .addField("الرقـــم الشـــخصي", message.author.id)
-  .addField('بــــوت', message.author.bot)
-  .addField("تاريخ التسجيل", message.author.createdAt)
+  .addField("account name", `${message.author.username}`)
+  .addField('account code', message.author.discriminator)
+  .addField("YOUR ID", message.author.id)
+  .addField('Bots', message.author.bot)
+  .addField("date registration", message.author.createdAt)
      
      
   message.channel.sendEmbed(embed);
     }
 });
-var prefix = "h";
+var prefix = "mm";
 client.on('message', message => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
@@ -174,13 +174,13 @@ client.on("guildMemberRemove", member => {
 );
 client.on("message", (message) => {
     if (message.content.startsWith("*ban ")) {
-      if(!message.member.hasPermission('BAN_MEMBERS')) return message.reply('⚠ ماعندك الصلاحيات');
+      if(!message.member.hasPermission('BAN_MEMBERS')) return message.reply('⚠ you dont have permission');
         var member= message.mentions.members.first();
         member.ban().then((member) => {
-            message.channel.send(member.displayName + " لقد تم طرده بنجاح :wave: ");
+            message.channel.send(member.displayName + " He was successfully expelled :wave: ");
         }).catch(() => {
-            message.channel.send(":x: هناك خطاء حاول مره أخرى:x: ");
+            message.channel.send(":x: There are mistakes try again:x: ");
         });
     }
 });
-client.login(process.env.TOKEN);
+client.login("NDYwOTExMTYwMDQ1MzM4NjI0.DhL0pQ.I4L__rMoI8KLCLGZ3pMj0o3s40A");

@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 client.on('ready', () => {
-  client.user.setGame(`mm help | By @HiMoxY™#1027 .`,'');
+  client.user.setGame(`.help | By @HiMoxY™#1027 .`,'');
   console.log('---------------');
   console.log(' Bot Is Online')
   console.log('---------------')
@@ -19,25 +19,25 @@ client.on('message', msg => {
     msg.reply('pong');
   }
 });
-if (message.content === 'mm help') {
+if (message.content === '.help') {
               var embed  = new Discord.RichEmbed()
                 .addField("**LINKS**" ,":no_entry_sign: Added blocking links :no_entry_sign: ")
-                .addField("broadcast (bc)" ,"**user:** ``mm broadcast <message> , $bc <message>``")
-                .addField("**BAN**" ,"**user:** ``mm ban <user>``")
-                .addField("**KICK**" ,"**user:** ``mm kick <user> ``")
-                .addField("**ِAVATAR**" ,"**user:** ``mm avatar``")
-                .addField("**INFO**", "**user :** ``mm info``")
-                .addField("**SAY**" ,"**user:** ``$say <message>``")
-                .addField("**ID**" ,"**ال��ستخدام:** ``mm id``")
-                .addField("**SERVER**" ,"**user:** ``mm server``")
-                .addField("**INVITE**" ,"**user:** ``mm invite <invite bots>``")
-                .addField("**SUPPORT**" ,"**user:** ``$suppport <server support>``")
-                .addField("**QA**" ,"**user:** ``mm qa <السؤال>``  ")
-                .addField("**CLEAR**" ,"**user:** ``mm clear <العدد>``")
-                .addField("**PING**", "**user:** ``mm ping``")
-                .addField("**SERVERNAME**", "**user:** ``mm servername``")
-                .addField("**CUT_TWEET**", "**user** ``mm ct``")
-                .addField("**TWEET**", "**user** ``mm tweet <message>``")
+                .addField("broadcast (bc)" ,"**user:** ``.broadcast <message> , $bc <message>``")
+                .addField("**BAN**" ,"**user:** ``.ban <user>``")
+                .addField("**KICK**" ,"**user:** ``.kick <user> ``")
+                .addField("**ِAVATAR**" ,"**user:** ``.avatar``")
+                .addField("**INFO**", "**user :** ``.info``")
+                .addField("**SAY**" ,"**user:** ``.say <message>``")
+                .addField("**ID**" ,"**ال��ستخدام:** ``.id``")
+                .addField("**SERVER**" ,"**user:** ``.server``")
+                .addField("**INVITE**" ,"**user:** ``.invite <invite bots>``")
+                .addField("**SUPPORT**" ,"**user:** ``.suppport <server support>``")
+                .addField("**QA**" ,"**user:** ``.qa <السؤال>``  ")
+                .addField("**CLEAR**" ,"**user:** ``.clear <العدد>``")
+                .addField("**PING**", "**user:** ``.ping``")
+                .addField("**SERVERNAME**", "**user:** ``.servername``")
+                .addField("**CUT_TWEET**", "**user** ``.ct``")
+                .addField("**TWEET**", "**user** ``.tweet <message>``")
                 .addField("**NO INVITE LINKE**","Added the block blocking feature")
                 .addField("**LOGIN**" , " Mommy📻 ")
                 .setColor('RANDOM')
@@ -63,7 +63,7 @@ client.on('message', message => {
         message.delete()
     return message.reply(`** No Invite Links :angry: ! **`)
     }
-	if (message.content === 'mm play') {
+	if (message.content === '.play') {
     if (message.member.voiceChannel) {       
         message.member.voiceChannel.join()
         .then(connection => {
@@ -77,12 +77,12 @@ client.on('message', message => {
 }
 });
 client.on('message', msg => {
-  if (msg.content === 'mm invite') {
+  if (msg.content === '.invite') {
     msg.reply('https://discordapp.com/oauth2/authorize/?permissions=2146958591&scope=bot&client_id=445626711313219594');
   }
 });
 client.on('message', msg => {
-  if (msg.content === 'mm help') {
+  if (msg.content === '.help') {
     msg.reply(':envelope: | Message sent in private');
   }
 });
@@ -110,17 +110,17 @@ client.on("message", message => {
 });
 // Your Avatar URL!
 client.on('message', message => {
-    if (message.content === "mm Avatar") {
+    if (message.content === ".Avatar") {
     message.reply(message.author.avatarURL); 
     }
 });
 client.on('message', msg => {
-  if (msg.content === 'mm suppport') {
+  if (msg.content === '.suppport') {
     msg.reply('server support join ,https://discord.gg/G7D7VnD');
   }
 });
 client.on("message", message => {
-      if (message.content === "mm ping") {
+      if (message.content === ".ping") {
       const embed = new Discord.RichEmbed()
   .setColor("RANDOM")
   .addField('**Ping:**' , `${Date.now() - message.createdTimestamp}` + ' ms')
@@ -128,7 +128,7 @@ client.on("message", message => {
     }
 });
     client.on('message', message => {
-     if (message.content === "mm id") {
+     if (message.content === ".id") {
      let embed = new Discord.RichEmbed()
   .setThumbnail(message.author.avatarURL)  
   .setAuthor(message.author.username)
@@ -145,7 +145,7 @@ client.on("message", message => {
   message.channel.sendEmbed(embed);
     }
 });
-var prefix = "mm";
+var prefix = ".";
 client.on('message', message => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
@@ -173,7 +173,7 @@ client.on("guildMemberRemove", member => {
   }
 );
 client.on("message", (message) => {
-    if (message.content.startsWith("*ban ")) {
+    if (message.content.startsWith(".ban ")) {
       if(!message.member.hasPermission('BAN_MEMBERS')) return message.reply('⚠ you dont have permission');
         var member= message.mentions.members.first();
         member.ban().then((member) => {

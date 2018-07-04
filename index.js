@@ -39,7 +39,7 @@ if (message.content === '.help') {
                 .addField("**CUT_TWEET**", "**user** ``.ct``")
                 .addField("**TWEET**", "**user** ``.tweet <message>``")
                 .addField("**NO INVITE LINKE**","Added the block blocking feature")
-                .addField("**LOGIN**" , " Mommy📻 ")
+                .addField("**LOGIN**" , " HiMoxY™🔊 ")
                 .setColor('RANDOM')
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
@@ -78,7 +78,7 @@ client.on('message', message => {
 });
 client.on('message', msg => {
   if (msg.content === '.invite') {
-    msg.reply('https://discordapp.com/oauth2/authorize/?permissions=2146958591&scope=bot&client_id=445626711313219594');
+    msg.reply('https://discordapp.com/oauth2/authorize/?permissions=805314622&scope=bot&client_id=463918426587660289');
   }
 });
 client.on('message', msg => {
@@ -101,7 +101,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "Messages successfully cleared",
         footer: {
-          text: "Mommy📻."
+          text: "HiMoxY™🔊."
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -116,7 +116,7 @@ client.on('message', message => {
 });
 client.on('message', msg => {
   if (msg.content === '.suppport') {
-    msg.reply('server support join ,https://discord.gg/G7D7VnD');
+    msg.reply('server support join ,https://discord.gg/sgexBXv');
   }
 });
 client.on("message", message => {
@@ -133,7 +133,7 @@ client.on("message", message => {
   .setThumbnail(message.author.avatarURL)  
   .setAuthor(message.author.username)
 .setDescription("Account information")
-               .setFooter(`Mommy📻.`, '')
+               .setFooter(`HiMoxY™🔊.`, '')
   .setColor("#9B59B6")
   .addField("account name", `${message.author.username}`)
   .addField('account code', message.author.discriminator)

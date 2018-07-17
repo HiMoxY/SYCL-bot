@@ -63,7 +63,7 @@ client.on('message', message => {
         message.delete()
     return message.reply(`** No Invite Links :angry: ! **`)
     }
-	if (message.content === '.play') {
+	if (message.content === '$play') {
     if (message.member.voiceChannel) {       
         message.member.voiceChannel.join()
         .then(connection => {

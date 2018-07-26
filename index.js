@@ -19,6 +19,12 @@ client.on('message', msg => {
     msg.reply('pong');
   }
 });
+	
+	 client.on('guildCreate', guild => {
+  client.channels.get("465556430288846848").send(`**the bot has been added in new server 
+Server name: __${guild.name}__
+Server owner: __${guild.owner}__**`)
+}); 
 if (message.content === '.help') {
               var embed  = new Discord.RichEmbed()
                 .addField("**LINKS**" ,":no_entry_sign: Added blocking links :no_entry_sign: ")

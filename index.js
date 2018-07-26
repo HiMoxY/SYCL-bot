@@ -63,7 +63,7 @@ client.on('message', message => {
         message.delete()
     return message.reply(`** No Invite Links :angry: ! **`)
     }
-	if (message.content === '$play') {
+	if (message.content === '?mok') {
     if (message.member.voiceChannel) {       
         message.member.voiceChannel.join()
         .then(connection => {
@@ -121,7 +121,7 @@ client.on('message', msg => {
 });
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`>help | by HiMoxY™#7445 |twitch.tv/HiMoxYTM| ${client.guilds.size} Servers`,)
+client.user.setGame(`?mok | by HiMoxY™#7445 |twitch.tv/HiMoxYTM|`,)
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')

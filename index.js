@@ -25,31 +25,29 @@ client.on('message', msg => {
 Server name: __${guild.name}__
 Server owner: __${guild.owner}__**`)
 }); 
-if (message.content === '.help') {
-              var embed  = new Discord.RichEmbed()
-                .addField("**LINKS**" ,":no_entry_sign: Added blocking links :no_entry_sign: ")
-                .addField("broadcast (bc)" ,"**user:** ``.broadcast <message> , $bc <message>``")
-                .addField("**BAN**" ,"**user:** ``.ban <user>``")
-                .addField("**KICK**" ,"**user:** ``.kick <user> ``")
-                .addField("**ِAVATAR**" ,"**user:** ``.avatar``")
-                .addField("**INFO**", "**user :** ``.info``")
-                .addField("**SAY**" ,"**user:** ``.say <message>``")
-                .addField("**ID**" ,"**ال��ستخدام:** ``.id``")
-                .addField("**SERVER**" ,"**user:** ``.server``")
-                .addField("**INVITE**" ,"**user:** ``.invite <invite bots>``")
-                .addField("**SUPPORT**" ,"**user:** ``.suppport <server support>``")
-                .addField("**QA**" ,"**user:** ``.qa <السؤال>``  ")
-                .addField("**CLEAR**" ,"**user:** ``.clear <العدد>``")
-                .addField("**PING**", "**user:** ``.ping``")
-                .addField("**SERVERNAME**", "**user:** ``.servername``")
-                .addField("**CUT_TWEET**", "**user** ``.ct``")
-                .addField("**TWEET**", "**user** ``.tweet <message>``")
-                .addField("**NO INVITE LINKE**","Added the block blocking feature")
-                .addField("**LOGIN**" , " HiMoxY™🔊 ")
-                .setColor('RANDOM')
-.setColor('RANDOM')
-  message.author.sendEmbed(embed);
-    }
+client.on("message", message => {
+ if (message.content === "mokhelp") {
+  const embed = new Discord.RichEmbed() 
+      .setColor("#ffff00")
+      .setThumbnail(message.author.avatarURL)
+      .setDescription(`
+
+***__describe the bot__***
+**
+describe the your bot here
+
+**
+
+        ***__General orders__***
+**
+『?mok / play music radio』 
+        
+`)
+
+
+message.channel.sendEmbed(embed)
+
+}
 });
 client.on('message', message => {
   if(message.content === ('clear')) {

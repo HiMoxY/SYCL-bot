@@ -1,30 +1,18 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`?mok | by HiMoxY™#7445 |twitch.tv/HiMoxYTM| ${client.guilds.size} Servers`,)
-  console.log('')
-  console.log('')
-  console.log('╔[═════════════════════════════════════════════════════════════════]╗')
-  console.log(`[Start] ${new Date()}`);
-  console.log('╚[═════════════════════════════════════════════════════════════════]╝')
-  console.log('')
-  console.log('╔[════════════════════════════════════]╗');
-  console.log(`Logged in as * [ " ${client.user.username} " ]`);
-  console.log('')
-  console.log('Informations :')
-  console.log('')
-  console.log(`servers! [ " ${client.guilds.size} " ]`);
-  console.log(`Users! [ " ${client.users.size} " ]`);
-  console.log(`channels! [ " ${client.channels.size} " ]`);
-  console.log('╚[════════════════════════════════════]╝')
-  console.log('')
-  console.log('╔[════════════]╗')
+  client.user.setGame(`.help | By @HiMoxY™#1027 .`,'');
+  console.log('---------------');
   console.log(' Bot Is Online')
-  console.log('╚[════════════]╝')
-  console.log('')
-  console.log('')
+  console.log('---------------')
 });
+client.on('message', message => {
+     if (message.content === ".servers") {
+     let embed = new Discord.RichEmbed()
+  .setColor("#0000FF")
+  .addField("**Server: **" , client.guilds.size)
+  message.channel.sendEmbed(embed);
+    }
 
 client.on('message', msg => {
   if (msg.content === 'ping') {
@@ -75,7 +63,7 @@ client.on('message', message => {
         message.delete()
     return message.reply(`** No Invite Links :angry: ! **`)
     }
-	if (message.content === '?mok') {
+	if (message.content === '$play') {
     if (message.member.voiceChannel) {       
         message.member.voiceChannel.join()
         .then(connection => {
@@ -131,68 +119,29 @@ client.on('message', msg => {
     msg.reply('server support join ,https://discord.gg/sgexBXv');
   }
 });
-client.on("message", message => {
-      if (message.content === ".ping") {
-      const embed = new Discord.RichEmbed()
-  .setColor("RANDOM")
-  .addField('**Ping:**' , `${Date.now() - message.createdTimestamp}` + ' ms')
-  message.channel.sendEmbed(embed);
-    }
-});
-    client.on('message', message => {
-     if (message.content === ".id") {
-     let embed = new Discord.RichEmbed()
-  .setThumbnail(message.author.avatarURL)  
-  .setAuthor(message.author.username)
-.setDescription("Account information")
-               .setFooter(`HiMoxY™🔊.`, '')
-  .setColor("#9B59B6")
-  .addField("account name", `${message.author.username}`)
-  .addField('account code', message.author.discriminator)
-  .addField("YOUR ID", message.author.id)
-  .addField('Bots', message.author.bot)
-  .addField("date registration", message.author.createdAt)
-     
-     
-  message.channel.sendEmbed(embed);
-    }
-});
-var prefix = ".";
-client.on('message', message => {
-  if (message.author.bot) return;
-  if (!message.content.startsWith(prefix)) return;
-
-  let command = message.content.split(" ")[0];
-  command = command.slice(prefix.length);
-
-  let args = message.content.split(" ").slice(1);
-
-  if (command == "say") {
-   message.channel.sendMessage(args.join("  "))
-  }
-});
-client.on("guildMemberRemove", member => {
-  let guild = member.guild;
-  guild.defaultChannel.sendMessage("", {embed: {
-  color: 808080,
-  author: {
-    name: member.user.username,
-    icon_url: member.user.avatarURL
-  },
-  title: guild.name,
-  description: ' Bye ..',
-}}).catch(console.error);
-  }
-);
-client.on("message", (message) => {
-    if (message.content.startsWith(".ban ")) {
-      if(!message.member.hasPermission('BAN_MEMBERS')) return message.reply('⚠ you dont have permission');
-        var member= message.mentions.members.first();
-        member.ban().then((member) => {
-            message.channel.send(member.displayName + " He was successfully expelled :wave: ");
-        }).catch(() => {
-            message.channel.send(":x: There are mistakes try again:x: ");
-        });
-    }
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+client.user.setGame(`>help | by HiMoxY™#7445 |twitch.tv/HiMoxYTM| ${client.guilds.size} Servers`,)
+  console.log('')
+  console.log('')
+  console.log('╔[═════════════════════════════════════════════════════════════════]╗')
+  console.log(`[Start] ${new Date()}`);
+  console.log('╚[═════════════════════════════════════════════════════════════════]╝')
+  console.log('')
+  console.log('╔[════════════════════════════════════]╗');
+  console.log(`Logged in as * [ " ${client.user.username} " ]`);
+  console.log('')
+  console.log('Informations :')
+  console.log('')
+  console.log(`servers! [ " ${client.guilds.size} " ]`);
+  console.log(`Users! [ " ${client.users.size} " ]`);
+  console.log(`channels! [ " ${client.channels.size} " ]`);
+  console.log('╚[════════════════════════════════════]╝')
+  console.log('')
+  console.log('╔[════════════]╗')
+  console.log(' Bot Is Online')
+  console.log('╚[════════════]╝')
+  console.log('')
+  console.log('')
 });
 client.login(process.env.TOKEN);

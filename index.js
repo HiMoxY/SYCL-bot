@@ -127,7 +127,7 @@ client.on('message', msg => {
 });
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`?mok | by HiMoxY™#7445 |twitch.tv/HiMoxYTM|`,)
+client.user.setGame(`twitch.tv/HiMoxYTM | ?mok`,)
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')

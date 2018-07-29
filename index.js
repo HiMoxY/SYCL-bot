@@ -20,11 +20,6 @@ client.on('message', msg => {
   }
 });
 	
- client.on('guildCreate', guild => {
-  client.channels.get("465556430288846848").send(`**the bot has been added in new server 
-Server name: __${guild.name}__
-Server owner: __${guild.owner}__**`)
-}); 
 	
 if (message.content === '.help') {
               var embed  = new Discord.RichEmbed()
@@ -151,4 +146,10 @@ client.user.setGame(`?mok | on [${client.guilds.size}]Servers`,)
   console.log('')
   console.log('')
 });
+
+ client.on('guildCreate', guild => {
+  client.channels.get("465556430288846848").send(`**the bot has been added in new server 
+Server name: __${guild.name}__
+Server owner: __${guild.owner}__**`)
+}); 
 client.login(process.env.TOKEN);

@@ -57,14 +57,6 @@ client.on('message', message => {
     message.channel.fetchMessages({limit: messagecount})
         .then(messages => message.channel.bulkDelete(messages));
   }
-});
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('discord.gg')){
-      if(!message.member.hasPermission('ADMINISTRATOR'))
-        message.delete()
-    return message.reply(`** No Invite Links :angry: ! **`)
-    }
 	if (message.content === '?mok') {
     if (message.member.voiceChannel) {       
         message.member.voiceChannel.join()

@@ -140,7 +140,7 @@ client.user.setActivity("?mok|DST server ",{type: 'WATCHING'})
 });
 
  client.on('guildCreate', guild => {
-  client.channels.get("465556430288846848").send(`**the bot has been added in new server 
+  client.channels.get("482324799478300704").send(`**the bot has been added in new server 
 Server name: __${guild.name}__
 Server owner: __${guild.owner}__**`)
 }); 

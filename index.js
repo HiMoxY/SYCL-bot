@@ -115,7 +115,7 @@ client.on('message', msg => {
 });
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`?mok | on [${client.guilds.size}]Servers`,)
+client.user.setActivity("?mok|DST server ",{type: 'WATCHING'})
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')

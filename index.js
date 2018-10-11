@@ -22,7 +22,7 @@ client.on('message', message => {
     message.channel.fetchMessages({limit: messagecount})
         .then(messages => message.channel.bulkDelete(messages));
   }
-	if (message.content === '?mok') {
+	if (message.content === '?vrt') {
     if (message.member.voiceChannel) {       
         message.member.voiceChannel.join()
         .then(connection => {

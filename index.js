@@ -37,7 +37,7 @@ client.on('message', message => {
 });
 client.on('message', msg => {
   if (msg.content === '.invite') {
-    msg.reply('https://discordapp.com/oauth2/authorize/?permissions=805314622&scope=bot&client_id=498889862385106959');
+    msg.reply('https://discordapp.com/oauth2/authorize/?permissions=805314622&scope=bot&client_id=518083134177280003');
   }
 });
 client.on('ready', () => {
@@ -67,7 +67,7 @@ client.user.setActivity("?vrt | VrT server ",{type: 'WATCHING'})
 });
 
  client.on('guildCreate', guild => {
-  client.channels.get("482324799478300704").send(`**the bot has been added in new server 
+  client.channels.get("494594801052942336").send(`**the bot has been added in new server 
 Server name: __${guild.name}__
 Server owner: __${guild.owner}__**`)
 }); 

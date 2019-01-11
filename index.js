@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-
+const prefix = '?'
 
 
 client.on('ready', () => {
@@ -66,9 +66,17 @@ client.user.setActivity("?nijoze | Nijoze server ",{type: 'WATCHING'})
   console.log('')
 });
 
- client.on('guildCreate', guild => {
-  client.channels.get("494594801052942336").send(`**the bot has been added in new server 
-Server name: __${guild.name}__
-Server owner: __${guild.owner}__**`)
-}); 
+client.on('message', message => {
+              let args = message.content.split(" ").slice(1).join(" ");
+              if (message.content.startsWith(prefix +'say')) {
+              message.delete();
+              if (!message.member.hasPermission("ADMINISTRATOR")) return sa.reply('This command only admins ⁉');
+              if(!args) return;
+                let say = new Discord.RichEmbed()
+                .setDescription(`${args}`)
+                .setColor('#02f35b')
+                message.channel.sendMessage(say);
+              
+              }
+});
 client.login(process.env.TOKEN);
